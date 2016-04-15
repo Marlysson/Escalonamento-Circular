@@ -5,9 +5,9 @@ from listacircular import ListaCircular
 from processador import Processador
 from processo import Processo
 
-quantum = int(raw_input("Digite o valor do quantum: "))
-troca_contexto = int(raw_input("Digite o valor da troca de contexto: "))
-quant_process = int(raw_input("Digite a quantidade de processos: "))
+quantum = int(input("Digite o valor do quantum: "))
+troca_contexto = int(input("Digite o valor da troca de contexto: "))
+quant_process = int(input("Digite a quantidade de processos: "))
 
 # quantum        = 2#randint(1,5)
 # troca_contexto = 2#randint(1,3)
@@ -24,7 +24,7 @@ for i in range(quant_process):
 
 print ("Processo criados\n")
 for i in range(len(processos)):
-	print processos[i]
+	print (processos[i])
 
 proc = Processador(quantum,contexto=troca_contexto)
 proc.execute(processos)
@@ -42,10 +42,4 @@ print("Valor do quantum: {}u".format(proc.get_quantum()))
 print("Tempo total de turnaroud: {}u".format(proc.get_turnarround()))
 print("Tempo medio de espera: {:.1f}u".format(proc.get_tempo_espera_medio()))
 
-'''
-Dados entradas
-- tempo do quantum - ok
-- tempo do processo - ok 
-- tempo da troca de contexto - ok
-'''
 
